@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Geolosaurus</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- light --> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+  <!-- favicon-->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+</head>
+
+<body  onload="loadSearchData()" style="margin:0;">
+  <div class="column-placeholder">
+    <h2>Contents</h2>
+  </div>
+  <div class="column1">
+    <br><br><br><br> <br><br><br>
+    <h2>Contents</h2>
+    <div class="links">
+      <a id = "home-button" href="#">Home </a> 
+      <a href="#drainage">Drainage </a>
+      <a href="#earth-interior">Earth Interior</a>
+      <a href="#earthquake-types">Earth<wbr>quake Types </a>
+      <a href="#faults">Faults</a>
+      <a href="#groundwater">Groundwater </a> 
+      <a href="#hydro-graphs">Hydro Models/ Systems </a> 
+      <a href="#instruments">Instruments</a>
+      <a href="#karst">Karst </a> 
+      <a href="#lake-qualities">Lake Qualities</a>
+      <a href="#landforms">Landforms </a>
+      <a href="#melting-types">Melting Types </a>
+      <a href="#mineral-properties">Mineral Properties </a>
+      <a href="#ologies">-Ologies</a>
+      <a href="#plate-boundaries">Plate Boundaries</a>
+      <a href="#pollution">Pollution</a>
+      <a href="#rock-intrusions">Rock Intrusions</a>
+      <a href="#rock-types">Rock Types </a>
+      <a href="#volcano-types">Volcano Types </a>
+      <a href="#wetlands">Wetlands </a>
+      <p style="text-align: center; font-size: 10px;">made with 💚 by Tina Xing</p>
+    </div> 
+    
+  </div>
+  <div class="search-contains">
+      <div class="form-container">
+        <br>
+        <input id="searchbar" autocomplete="off" onkeyup="search()" type="text"\n name="search" class="input" placeholder="🔍   Search Geolosaurus's categories! Sadly I don't search specific vocab.  :)">
+        <div id="list"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  
+  <div class="column2">
+    <br><br><br><br> <br>
+   
+      <h1 style="font-size: 68px; "> Geolo<wbr>saurus </h1>
+     <img width="200px"; src="logo.png">
+    
+    <p style="text-align: center;">Welcome! I'm a geology glossary (vocabulary collection). Use me to learn, foster knowledge, for exam prep needs... whatever you name it! Terms are grouped into categories (navigate through side bar), and they're from various geological disciplines such as geohydrology or lithology. Ctrl+F if you'd like to find a specific term. Explanations from USGS, GeoLibretexts, NPS, ScienceDirect, USESO Guide, and more. Geolosaurus hopes you find this helpful for whatever brings you here! 🌋 </p>
+    <br>
+    
+
+    <div class="cardContainer">
+      <!-- greenish:  e9edc9 | non geo -->
+      <!-- purple: c8a4d4 | minerals i guess -->
+      
+     <a href="#volcano-types"><div class="card" style="background-color:#faedcd;">
+        <h2>Volcano types</h2>
+        <p>Cinder cones, stratovolcanoes, shield volcanoes, etc., and their properties.</p>
+      </div></a>
+      
+      <a href="#drainage"> <div class="card" style="background-color:#d4a373;">
+        <h2>Drainage Pattens and Ordering</h2>
+        <p>Terms regarding drainage types and stream ordering! </p> 
+        
+      </div> </a>
+      <a href="#mineral-properties"><div class="card" style="background-color:#c8a4d4;">
+        <h2>Mineral Properties</h2>
+        <p>Terms on luster, twinning, streaks, fluorescence, diaphaneity, and more. </p>
+      </div></a>
+      
+      <a href="#groundwater"><div class="card" style="background-color:#b9d3c5;">
+        <h2> Groundwater</h2>
+        <p>Terms on groundwater system parts and more. Deals with geohydrology.</p>
+      </div> </a>
+
+      <a href="#instruments"><div class="card" style="background-color:#e9edc9;">
+        <h2> Instruments</h2>
+        <p>Many types of tools including the secchi disk and tensiometer, and their purposes.</p>
+      </div> </a>
+      
+      <a href="#landforms"><div class="card" style="background-color:#b9d3c5;">
+        <h2>Land/River-Forms</h2>
+        <p>Land/river-forms like stream types, bajadas, chutes, deltas, fjords, levees, meanders, palsas, etc. </p>
+      </div></a>
+
+       <a href="#rock-intrusions"> <div class="card" style="background-color:#d4a373;">
+        <h2>Rock Intrusions</h2>
+        <p>Batholiths, sills, dykes, xenoliths...   </p> 
+      </div> </a>
+
+      <a href="#pollution"><div class="card" style="background-color:#e9edc9;">
+        <h2>Pollution</h2>
+        <p>Types, contamination, point vs non-point source, etc.</p>
+      </div></a>
+      
+      <a href="#faults"><div class="card" style="background-color:#faedcd">
+        <h2> Faults</h2>
+        <p>The common types of faults, what forces caused them, and where they are found.</p>
+      </div> </a>
+      
+        <a href="#wetlands"><div class="card" style="background-color:#b9d3c5;">
+        <h2>Wetlands</h2>
+        <p>Types of wetlands such as bogs and marshes, and common wetland characteristics! </p>
+      </div></a>
+      
+      <a href="#earth-interior"><div class="card" style="background-color:#faedcd;">
+        <h2>Earth's Interior</h2>
+        <p>Earth's structure from the outside to inside. </p>
+      </div></a>
+      <a href="#melting-types"><div class="card" style="background-color:#faedcd;">
+        <h2>Melting Types</h2>
+        <p>Decompression melting, flux melting, and heat-induced melting.</p>
+      </div></a>
+
+      <a href="#karst"><div class="card" style="background-color:#d4a373;">
+        <h2>Karst</h2>
+        <p>What is karst, types of karsts and other related topography.</p>
+      </div></a>
+
+      <a href="#lake-qualities"><div class="card" style="background-color:#b9d3c5;">
+        <h2> Lake/water Qualities</h2>
+        <p>Lake overturning types, layers, oxygen, etc.</p>
+      </div> </a>
+
+      <a href="#earthquake-types"><div class="card" style="background-color:#faedcd;">
+        <h2>Earthquake Types</h2>
+        <p>Tectonic, volcanic, collision, and explosion earthquakes. </p>
+      </div></a>
+
+      <a href="#plate-boundaries"><div class="card" style="background-color:#faedcd;">
+        <h2>Plate Boundaries</h2>
+        <p>Convergent, divergent, transform boundaries and their characteristics. Also active vs. passive margins.</p>
+      </div></a>
+
+      <a href="#hydro-graphs"><div class="card" style="background-color:#b9d3c5;">
+        <h2> Hydrology Graphs, Models, Systems</h2>
+        <p>The hydrograph and parts of it, other stream classifications, diagram models, etc. </p>
+      </div> </a>
+      
+    </div>
+
+    
+
+    <h2 id="drainage"> <br><br><br><br> Drainage Systems and Orders </h2>
+    <p>
+      <mark>Angular</mark>: where bedrock joints and faults intersect at more acute angles than rectangular drainage patterns. Can be acute or obtuse<br>
+      <mark>Annular</mark>: known as the “circular pattern”. Streams traces out the weak belt of rock leading to the formation of tangential or greater concentric path. ex: red valley that encircles domal structure of Black Hills (South Dakota) <br>
+      <mark>Barbed</mark>: originated when tributaries flowed in an opposite direction to the master stream. When tributaries flow in the opposite direction to their master streams. Caused by stream piracy (river capture). Forms obtuse angle with main-stream (points up) Ex: Maumee river, fort wayne <br>
+      <mark>Basin</mark>: depression, or dip, in the Earth's surface; bowl shaped <br>
+      <mark>Centripetal</mark>: converges at a point. Ex: arid areas, parts of cali or new mexico, or in karst or deranged areas of drainage <br> 
+      <mark>Classical order</mark>: "Bottom up" order. Mouth of river is 1 <br>
+      <mark>Dendritic</mark>: forms on rock not folded (such as granite). Minimal faulting and jointing. One type of rock/ area has a similar resistance to erosion. Most common. Arborescent. Canadian Shield, areas of British Columbia. Widespread in North America plains, Badlands south dakota <br>
+      <mark>Deranged</mark>: A drainage system in drainage basins where there is no coherent pattern to the rivers and lakes.Ex: Canadian shield, Siberian tundra landscapes <br>
+      <mark>Divide</mark>: elevated terrain that separates neighboring drainage basins. <br>
+      <mark>Endorheic basin</mark>: closed basin; retains water. Water converges to single point in basin (a sink).  <br>
+      <mark>Integrated</mark>: unique to arid climates. They form by the coming together of individual basins formerly separated by high ground <br>
+      <mark>Herringbone</mark>: develops in mountain-containing regions with steep slopes/valleys, where tributaries and master streams converge. tributaries meet at right angles to the stream. Lateral consequents: the tributaries, Longitudinal consequent: main stream <br>
+      <mark>Horton</mark>: used by GIS services. Top down. Tributaries are 1
+Major stream divide: water on sides never meet till ocean <br>
+      <mark>Major river orders</mark>: Amazon :12th, Mississippi: 10th, Rio grande: 7th <br>
+      <mark>Minor stream divide</mark>: waters meet at confluence  <br>
+      <mark>Parallel</mark>: forms where there’s steep slope (mountain ranges). more frequent in newly emerged coastal plains.  Ex:  mesa verde national park in CO, other regions of plateaus with monoclinal warps <br>
+      <mark>Pinnate</mark>: leaf pattern. Feather-like, with tributaries parallel and joining the master stream at acute angles.  <br>
+      <mark>Radial</mark>: when there’s peaks like volcanoes . mt rainier, lake district of England, avery dome <br>
+      <mark>Rectangular</mark>: faulting and no topography. Tightly packed rocky ground, ex: adirondack mountains. Streams follow the path of least resistance and thus are concentrated in places where exposed rock is the weakest. Movement of the surface due to faulting off-sets the direction of the stream. As a result, the tributary streams make sharp bends and enter the main stream at high angles. Least common: Canada <br>
+      <mark>Shreve</mark>: sums the number of sources in each catchment above a stream gauge or outflow, and correlates roughly to the discharge volumes and pollution levels.  <br>
+      <mark>Strahler</mark>: Horton Strahler. When two streams with different orders join, the resulting stream has the same order as the highest order of the two joining streams.   <br>
+      <mark>Trellis</mark>: bedrock eroded in different magnitudes of strength. alternating bands of weak and resistant bedrock. -Hard and soft rocks run parallel to each other. Ex: Appalachian mountains, Rocky Mts and Alberta. Synclines: downturned folds which form valleys in which reside the main channel of the stream. Anticlines: Short tributary streams that enter the main channel at sharp angles as they run down sides of parallel ridges <br>
+      
+    </p>
+    <h2 id="earth-interior">Earth's Interior</h2>
+    <p>
+      <mark>Crust</mark>: the outermost shell of a terrestrial planet. Continental and Oceanic.<br>
+      <mark>Continental crust</mark>: 200 to 250 km (depth of lithosphere-asthenosphere boundary). 5- 40 km thick (andesitic). Density: 2.7 g/cm3. Composition: granitic; mainly oxygen (46.6%) and silicon (27.7%). <br>
+      <mark>Oceanic crust</mark>: 50 to 140 km (depth of lithosphere-asthenosphere boundary). 6-7 km thick (basaltic). Thinner than continental crusts, because oceanic crusts are formed at a constant rate and cools very quickly. Density: 3.0 g/cm3. Composition: mafic.<br>
+      <mark>Pyrosphere</mark>: hypothetical spherical zone of molten magma that is held to intervene between the crust of the earth and a solid nucleus and to supply lava to volcanoes. <br>
+      <mark>Lithosphere</mark>: Describes crust and upper mantle; lies over the asthenosphere. Between the Moho and Wiechert-Gutenberg discontinuities. <br>
+      <mark>Mantle</mark>: about 2,900 kilometers (1,802 miles) thick, and 84% of Earth’s total volume. <br>
+      <mark>Tectosphere</mark>: part of the mantle lying below cratons, which moves during tectonic activity <br>
+      <mark>Asthenosphere</mark>: a subdivision of the mantle situated below the lithosphere. A zone in the upper mantle that is relatively weak compared to the material above and below it. <br>
+      <mark>Mesosphere</mark>: Does not refer to the 3rd layer of our atmosphere, which is also known as mesosphere. This mesosphere lies underneath the asthenosphere. <br>
+      <mark>D" Layer</mark>: double prime layer. The lowermost portion of the mantle, sits just above the molten iron-rich outer core. <br>
+      <mark>Core</mark>: 2,900 kilometers (1,802 miles) below Earth’s surface, and has a radius of about 3,485 kilometers (2,165 miles). 90% of Earth's sulfur is in the core. Temperatures range from 4,400° Celsius - 6,000° Celsius ((7,952° Fahrenheit - 10,800° Fahrenheit). <br>
+      <mark>Barysphere</mark>: the innermost layer of the earth surface (core)<br>
+      <mark>Outer Core</mark>: 2,200 kilometers (1,367 miles) thick. Mostly of Iron and Nickel (Fe and Ni). Here, Earth's magnetic field is created due to Earth's rotation and flowing of liquid metal. <br>
+      <mark>Inner Core</mark>: Radius of 1,220 kilometers (758 miles). The intense pressure prevents the iron from melting. Pressure: nearly 3.6 million atmospheres. <br>
+      <mark>Inner-inner core</mark>: Not much known about this layer:  The crystals of the inner inner core are oriented east-west instead of north-south. <br>
+    </p>
+
+    <h2 id="earthquake-types"> <br><br><br><br>Earthquake Types</h2>
+    <p>
+
+      <mark>Tectonic earthquake</mark>: one that occurs when the earth's crust breaks due to geological forces on rocks and adjoining plates that cause physical and chemical changes.<br>
+      <mark>Volcanic earthquake</mark>: any earthquake that results from tectonic forces which occur in conjunction with volcanic activity.<br>
+      <mark>Collapse earthquake</mark>: small earthquakes in underground caverns and mines that are caused by seismic waves produced from the explosion of rock on the surface.<br>
+      <mark>Explosion earthquake</mark>: earthquake that is the result of the detonation of a nuclear and/or chemical device.<br>
+
+      
+    </p>
+
+    <h2 id="faults"><br><br><br><br>Faults</h2>
+    <p>
+      <mark>Dip Slip fault</mark>: 2 types: Normal and Reverse fault (thrust fault included). Offset is predominantly vertical and/or perpendicular to the fault trace. Parts: hanging wall and footwall. <br>
+      <mark>Normal fault</mark>: type of dip slip fault. Caused by tensional forces (or extensional forces). Hanging wall moves downwards relative to the footwall. Found along divergent boundaries. <br>
+      <mark>Reverse fault</mark>: type of dip slip fault. Caused by compressional forces. Hanging wall moves up relative to the footwall. Found along convergent boundaries. <br> 
+      <mark>Strike Slip fault</mark>: Offset is predominantly horizontal, parallel to the fault trace. Found on conservative (transform) plate boundaries: where two crustal plates slide past each other. Caused by shear forces. <br>
+      <mark>Thrust fault</mark>: Has the same sense of motion as a reverse fault, but with the dip of the fault plane at less than 45°. <br>
+      <mark>Oblique Slip fault</mark>: Combination of strike slip and dip slip <br>
+
+      
+    </p>
+
+    
+
+
+    
+    <h2 id="groundwater"><br><br><br><br> Groundwater</h2>
+    <p>
+      <mark>Aeration Zone</mark>: Zone below the land surface where pores contain both water and air. Plant roots can capture the moisture in this zone. cannot provide water for wells. <br>
+      <mark>Artesian</mark>: water that flows naturally from underground to the surface <br>
+      <mark>Artesian aquifer</mark>: has trapped water, surrounded by layers of impermeable rock or clay, which apply positive pressure to the water contained within the aquifer  <br>
+      <mark>Artesian borehole</mark>: penetrate confined aquifers in which the piezometric surface is above ground level,  so that the boreholes spontaneously discharge water without being pumped. <br>
+      <mark>Artesian well</mark>: A well where water flows under natural pressure without pumping. It is dug or drilled wherever a gently dipping, permeable rock layer (such as sandstone) receives water along its outcrop at a level higher than the level of the surface of the ground at the well site. <br>
+      <mark>Aquiclude</mark>: capable of storing water but doesn’t transmit it at rates enough to furnish appreciable supply for well/spring, porous, no permeability <br>
+      <mark>Aquifer</mark>: Stores/transmits water in sufficient quantities for use. Contains sufficient saturated permeable material to yield water to wells & springs. Types: Confined, unconfined, Leaky . porous and saturated. Like sponges where water seeps through. Gravel, sand, limestone <br>
+      <mark>Aquifuge</mark>: Rock which contains no interconnected openings/interstices. Neither stores nor transmits water. Impermeable rock; not porous.  <br>
+<mark>Aquitard</mark>: Confining bed that retards but does not prevent the flow of water to or from an adjacent aquifer; a leaky confining bed. Does not readily yield water to wells or springs; may serve as storage unit for ground water. Porous, low permeability <br> 
+      <mark>Base flow</mark>: Part of the stream discharge that isn’t attributable to direct runoff from precip or melting snow; usually sustained by groundwater discharge. <br>
+      <mark>Base flow index (BFI)</mark>: ratio of annual baseflow in a river to the total annual run-off. <br>
+<mark>Capillary</mark>: movement of water within the spaces of a porous material due to the forces of adhesion, cohesion, and surface tension
+Cascading water: Groundwater that trickles or pours through cracks or perforations down the casing/uncased borehole above water level in the well. <br>
+<mark>Cone of ascension</mark>: salt water rises 40 feet for every 1 foot of freshwater depression and forms this.<br>
+      <mark>Cone of depression</mark>: in an aquifer when groundwater is pumped from a well. In an unconfined aquifer, this is an actual depression of the water levels. In confined aquifers, the cone of depression is a reduction in the pressure head surrounding the pumped well. When groundwater is constantly pumped from a single area and the water is not immediately replenished. Unconfined aquifer has an actual depression in the level of water, while confined aquifer just has a reduction in the pressure head. <br>
+      <mark>Confined aquifer</mark>: Layers of impermeable material are both above and below the aquifer, causing it to be under pressure so that when the aquifer is penetrated by a well, the water will rise above the top of the aquifer. Recharged where the aquifer materials are exposed at the surface (outcrop). <br>
+      <mark>Confining unit</mark>: A hydrogeologic unit of impermeable or distinctly less permeable material bounding one or more aquifers & is a general term that replaces aquitard, aquifuge, aquiclude. Means a body of impermeable or distinctly less permeable material stratigraphically adjacent to one or more aquifers. <br>
+      <mark>Confining zone</mark>: Geological formation capable of limiting fluid movement above injection zone. <br>
+<mark>Critical porosity</mark>: porosity above which the rock can exist only as a suspension. <br>
+      <mark>Dewatering</mark>: abstracting water to lower water table to allow mining activity <br>
+      <mark>Drawdown</mark>: lowering of the water table or piezometric surface caused by the extraction of groundwater by pumping a borehole(s).<br>
+      <mark>Field capacity</mark>: water in larger pores are drained. Amount of soil moisture or water content held in soil after excess water has drained away <br>
+      <mark>Groundwater</mark>: Part of the subsurface water that is in the saturated zone. All water which occurs below the land surface within the unsaturated & saturated zones. Means water below land surface in zone of saturation. Water contained within an aquifer. Fast velocity = 30.48 cm/day or greater. Moves slowly along flow paths from areas of recharge → discharge at springs or along streams, lakes, and wetlands. flows from locations of higher hydraulic head to locations of lower hydraulic head. Flows at right angles to the equipotential lines <br>
+      <mark>Groundwater depletion</mark>: Overdrawing of water from groundwater faster than it can be replenished. Negative consequences: wells drying up, reduced water in streams/lakes, lower water quality, land subsidence <br>
+      <mark>Groundwater drilling</mark>: or groundwater extraction. Causes land subsidence, lack of surface water, and lowered water quality in aquifers. If there is too much extraction of groundwater, the water table lowers thus leading to wells not being able to reach groundwater; watersheds like rivers that connect to groundwater will also have the water supply diminished. Not ethical for the environment <br>
+      <mark>Human impact</mark>: groundwater pumping for oil and gas extraction, dumping toxic waste, landfill/waste disposal, agricultural contaminants, urban and industrial discharges. Effects: changing topo, contaminants being toxic to life, decreasing water quality <br>
+      <mark>Hydraulic head</mark>: Hydrostatic pressure and gravitational energy at a given point. <br>
+      <mark>Injection well</mark>: Well used for injecting fluids into the subsurface. A well into which fluids are being injected. can be used to combat saltwater intrusion <br>
+      <mark>Injection zone</mark>: Geological formation receiving fluids through a well  <br>
+      <mark>Interstice</mark>: Opening in a rock or soil that is not occupied by solid matter. May be occupied by air, water, other gaseous/liquid material. Void, pore. <br>
+      <mark>Intrinsic permeability</mark>: ability of rock to conduct fluids <br>
+      <mark>Impermeable</mark>: no ability to transmit quantities of water under head differences ordinarily found in subsurface. <br>
+      <mark>Leaky aquifer</mark>: semi confined; aquifer whose upper and lower boundaries are aquitards, or one boundary is an aquitard and the other is an aquiclude. <br>
+      <mark>Monitoring well</mark>: A non-pumping well, generally of small diameter, that is used to measure the elevation of a water table or water quality <br>
+      <mark>Pellicular water</mark>: groundwater suspended above the water table in films that adhere to the surface of solid particles or the walls of cavities. <br>
+      <mark>Perched groundwater</mark>: Groundwater separated from an underlying body of groundwater by an unsaturated zone. Occurs when there is impermeable layer of rock/ sediment or relatively impermeable layer above the main water table/aquifer.  <br>
+      <mark>Perched water table</mark>: aquifer that occurs above the regional water table <br>
+      <mark>Permafrost</mark>: ground continuously remains below 0 °C (32 °F) for 2 or more years. When it thaws, carbon is released to atmosphere. Continuous (needs extremely cold temps to form, underlikes 90-100% of landscape), discontinuous (permafrost 50-90%), sporadic (permafrost 0-50%). melts releases methane and carbon, positive feedback loop since it contributes to warming, erosion on barren arctic slopes. Karst: Permafrost may contribute to karstification through mass wasting of slopes. This mass wasting opens cracks and allows water to infiltrate through taliks. Furthermore, permafrost promotes the formation of ice wedges, which are cracks in the ground formed by ice. Hinders karst: Permafrost may hinder karstification because the impermeability of permafrost restricts water from moving through<br>
+      <mark>Permanent wilting point</mark>: plants can no longer extract water.  <br>
+      <mark>Permeability</mark>: The property of a porous medium to transmit fluids under a hydraulic gradient. <br>
+      <mark>Pore</mark>: interstice. Space in rock, soil, unconsolidated sediment that’s not occupied by mineral matter & that allows the passage or absorption of fluids.  Most to least porous: potting soil, gravel, sand, silt, and clay. <br>
+      <mark>Pore space</mark>: Total space not occupied by solid soil or rock particles. <br>
+      <mark>Pore velocity</mark>: See velocity, average interstitial.
+Porosity: Calculated by dividing the pore volume by the total volume. % of the total bulk not occupied by solid particles. Porosity (%) = (Volume of Voids / Total Volume) x 100. gravel 	&lt; sand 	&lt; silt	&lt;clay	&lt;salts (highest porosity) <br> 
+      <mark>Potentiometric surface</mark>: imaginary surface intersecting all hydraulic heads <br>
+      <mark>Recharge</mark>: Process of addition of water to the saturated zone; also the water added. Infiltration of water. <br>
+      <mark>Recharge Area</mark>: Area in which water reaches the zone of saturation by surface infiltration. <br>
+      <mark>Saltwater intrusion</mark>: Movement of saltwater into freshwater aquifers. Result in abandonment of wells, induced with too much groundwater pumping, when freshwater flow towards coastal areas is reduced. Primarily penetrates vertically. (vertical = upward pressure) decrease in aquifer pressure, increase in ion content. Decrease crop yield: because of rising sea levels <br>
+      <mark>Saturated zone</mark>: Parts of the earth's crust in which all voids are filled with water under pressure greater than atmospheric
+Seepage: The fluid discharged at a seep. Amount of fluid discharged at a seep. <br>
+      <mark>Surface spreading</mark>: a method of artificial recharge used in groundwater management. Has to be flat. Raise water table. Upper layers must permeable. <br>
+      <mark>Talik</mark>: an area of year-round unfrozen ground surrounded by permafrost. <br>
+      <mark>Vadose zone</mark>: Underground water above the water table.
+Void: Underground open spaces or cavities that may be of natural or man:made origin.  <br>
+      <mark>Void ratio</mark>: Ratio of the void space to solid particles in a given soil mass  <br>
+      <mark>Unconfined</mark>: A condition in which the upper surface of the zone of saturation forms a water table under atmospheric pressure. recharged primarily from precipitation percolating, or infiltrating, down from ground surface <br>
+      <mark>Unconfined aquifer</mark>: An aquifer which has a water table. <br>
+      <mark>Underground injection</mark>: A "well injection".<br>
+      <mark>Unsaturated flow</mark>: movement of water in a porous medium in which the pore spaces are not filled to capacity with water.
+Unsaturated zone: zone between land surface & water table which includes capillary fringe. Water generally under	atmospheric pressure, & some voids may contain air/other gasses at atmospheric pressure. Beneath flooded areas or in perched water bodies the water pressure locally may be 	&gt; atmospheric pressure. <br>
+      <mark>Water table</mark>: Surface in groundwater body at which the water pressure is atmospheric. Upper surface of zone of saturation, where body of groundwater is not confined by overlying impermeable zone. Negative pressure above, positive below. <br>
+      <mark>Water table well</mark>: reaches to a depth below water table. Subject to lowering of the water table   <br>
+      <mark>Well</mark>: hole drilled into the ground to access water contained in an aquifer. <br>
+      <mark>Wetting front</mark>: boundary between the upper wet part of the soil and the dry lower part. Interface between soil that is unchanged from the initial state and the newly wetted zone from an infiltration or irrigation event. <br>
+      <mark>Zone of intermittent saturation</mark>: region, ∼50 cm in vertical extent at this site, in which the water table shifts in response to changes in river level and riparian evapotranspiration. <br> 
+    </p>
+    <h2 id="hydro-graphs"><br><br><br><br>Hydrology Graphs/Systems/Models/Diagrams</h2>
+    <p>
+      <mark>Caprock model</mark>: when river courses over resistant bedrock, erosion happens slowly and dominated by impacts of water borne sediment on rock, while downstream is more rapid <br>
+      <mark>Cowardin System</mark>: used by the U.S. Fish and Wildlife Service for the National Wetlands Inventory. wetlands are classified by landscape position, vegetation cover and hydrologic regime. 5 major wetland types: marine, tidal, lacustrine, palustrine and riverine. <br>
+      <mark>Falling limb</mark>: shows the return of discharge to normal/base flow on a hydrograph. <br>
+      <mark>Hutchinson</mark>: describes lake types. divides lake types according to the modality and number of thermal water mixtures: dimictic (two mixed phases in the temperate zone), amictic (no water mixing), oligomictic (low mixing), and polymictic (several mixtures). Glacial most abundant. Lake tahoe: Tectonic. <br>
+      <mark>Hjulstrom diagram</mark>: Filip Hjulström, is a graph used by hydrologists and geologists to determine whether a river will erode, transport, or deposit sediment. Upper curve = critical erosion velocity as function of particle size while lower curve = settling velocity as function of particle size. The curve does not take into account water depth, does not show that sedimentation is caused by flow velocity deceleration, and does not show that erosion is caused by flow acceleration <br>
+      <mark>Hydrograph</mark>: shows rate of water flow in relation to time, given a specific point or cross section. Often used to evaluate stormwater runoff on a particular site  <br>
+      <mark>Lag time</mark>: the time taken between peak rainfall and peak discharge. <br> 
+
+      
+    </p>
+
+    <h2 id="instruments"><br><br><br><br>Instruments</h2>
+    <p>
+      <mark>Actinometer</mark>: measures solar radiation, UV intensity<br>
+      <mark>Altimeter</mark>: sea height <br>
+      <mark>Atmometer</mark>: measures evaporation.<br>
+      <mark>Bailer</mark>: a device for withdrawing or collecting water from a well or borehole.<br>
+      <mark>Depth-to-water</mark>: measure the depth of water by lowering a wetted steel tape to into the well until the lower part of the tape is under water. Monitor saltwater intrusion.<br>
+      <mark>Flume</mark>:  measure flow rate in open channel flow applications. width of the stream it is placed in, causing water level to change and allowing users to calculate streamflow through the device<br>
+      <mark>Hygrometer</mark>: measures humidity<br>
+      <mark>Infiltrometer</mark>: measure the rate of water infiltration into soil or other porous media. <br>
+      <mark>Lysimeter</mark>: measures actual evapotranspiration which is released by plants <br>
+      <mark>Ombrometer</mark>: rain gauge.<br>
+      <mark>Neutron probe</mark>: measure quantity of water present in soil<br>
+      <mark>Partial-record gages</mark>: operated and quality assured only for given flow regimes such as high flow, peak flow, low flow, etc <br>
+      <mark>Phytometer</mark>: measures transpiration (a unit)<br>
+      <mark>Piezometer</mark>: measures groundwater pressure head at point in subsurface. small diameter well open at a point of short length in aquifer to allow measurement of hydraulic head a point. measures the water pressure at different depths in an aquifer<br>
+      <mark>Pluviometer</mark>: measures precip at given location over specified period of time.<br>
+      <mark>Rain gauge</mark>: collects water falling on it and records the change over time in the rainfall depth. Might underestimate because of turbulence.  <br>
+      <mark>Rapid deployment gauge</mark>: utilized in these scenarios where the location often does not have a gauge present. During times of emergency<br>
+      <mark>Secchi Disk</mark>: measures transparency of lakes. A 20 cm diameter disk with black and white quadrants. Turbidity. black-and-white Secchi disk is generally used to measure freshwater turbidity. When secchi depth is large, means oligotrophic, you can see farthest because there’s not much productivity blocking the light<br>
+      <mark>Staff gauge</mark>: measure water levels in lakes/rivers, reservoirs/other bodies of surface water <br>
+      <mark>Tensiometer</mark>: measure the moisture tension in the unsaturated zone.<br>
+      <mark>Wire weight gauge</mark>: measure the distance from a point of known elevation on the bridge to the water surface. <br>
+
+    </p>
+    
+    <h2 id="karst"><br><br><br><br>Karst</h2>
+    <p>
+      <mark>Alvar</mark>: Plain with thin soil and sparse grassland vegetation.  biological environment based on a limestone plain with thin or no soil and, as a result, sparse grassland vegetation.  <br>
+      <mark>Azonal karst</mark>: develop under any climate and they can be classified in several ways <br>
+      <mark>Blind valley</mark>: Steep-sided flat-bottomed valley terminating in a steep gradient <br>
+      <mark>Caves</mark>: Rainwater picks up CO2, and when rainwater percolates through soil, you get weak acid, which dissolves limestone; over time, some joints which dissolved are large enough to form caves. <br>
+      <mark>Initial Excavation</mark>: limy bedrock is dissolved by water and a void is created. Decoration Stage: Water leaves behind what it has been carrying (i.e. stalactites and stalagmites) <br>
+      <mark>Cenote</mark>: natural well/reservoir, when limestone surface collapses, exposes groundwater below. Popular in Mexico's yucatan. 
+Disappears: flow underground due to sinkholes/other features, so we can not see them, which is why it looks like it disappears. <br>
+      <mark>Doline</mark>: rolling plains with few surface streams, and often no valleys on the surface. Problematic because the sinkholes are sudden/abrupt, can lead to heavy property damage. <br>
+      <mark>Epikarst</mark>: is a perched aquifer, the uppermost layer of rock in karst regions, and the major point of contact and transmission between surface and subterranean water. <br>
+      <mark>Estavelle</mark>:  or inversac is a ground orifice which, depending on weather conditions and season, can serve either as a sink or as a source of freshwater. It is a type of ponor or sinkhole <br>
+      <mark>Farming benefits</mark>: Fertile soil, plenty of rainfall. Harms: sinkholes, water escapes quickly through cracks in the rocks.<br>
+      <mark>Flora</mark>: The area with more flora will have a higher probability of being a karst landscape because flora indicate the amount of CO2 trapped, and the more amount of CO2, the more acidic the landscape is, thus a higher probability of being a Karst landscape.<br>
+      <mark>Flowstone</mark>: Most common type of cave deposit, always made of calcite or other carbonate minerals. It forms in thin layers as a result of continuously flowing water. <br>
+      <mark>Foibe</mark>: foiba. Collapsed bedrock above a void; inverted funnel shape <br>
+      <mark>Grikes</mark>: develop joints in limestone<br>
+      <mark>Gulf</mark>: huge sinkhole. Solution valley. Can contain many sinkholes. <br>
+      <mark>Haystack</mark>: Generally-isolated steep-sided residual hill in the tropics composed of either limestone, marble, or dolomite, are surrounded by nearly flat alluvial plains. Eggbox, mogote <br>
+      <mark>Helictites</mark>:  contorted depositional speleothems which grow in any direction, seemingly defying gravity. Due to: Deposited calcite impurities, Oddly shaped crystals, Air currents, Pressure accumulated through varying flow <br>
+      <mark>Interstratal karst</mark>:  Developed beneath a cover of insoluble rocks <br>
+      <mark>Karren</mark>: small features of karstification. minor forms of karst due to solution of rock on its surface <br>
+      <mark>Karst</mark>: landscape underlain by limestone which has been eroded by dissolution, producing ridges, towers, fissures, sinkholes and other characteristic landforms. Favorable: dense rock, low water table, highly fractured rock, thinly bedded. Dolomite, Chalk, Gypsum, Salt, Limestone, Quartzite (all soluble). Sig source of freshwater. Water susceptible to contamination. Soil around karst is 8 pH (higher/more basic). 70% calcium carbonate. 2 harms to formation: Contamination and collapse. <br>
+      <mark>Karst Equations</mark>: CO2+H2O → H2CO3 and CACO3+H2CO3 → Ca(HCO3)2 . More flora = More CO2 trapped→more acidic→higher karst probability. 15% of Earth’s land surface. Nitric acid (HNO3) is responsible primarily.  40% of the groundwater used for drinking comes from karst aquifers. the world's largest limestone karst is Australia's Nullarbor Plain. 25% of drinking water sources are global. 20% of the land surface in the U.S. is classified as karst. 2 subgroups of static karst: zonal and azonal . Benefits; fertile soil, lots of rainfall. <mark>Karst Negative</mark>: sinkholes, collapse, contamination. More sensitive because they have a higher groundwater flow rate since they are more cavernous, making it easier for contaminations to
+spread. Limiting factor: Aridity/lack of precipitation<br>
+      <mark>Karstification</mark>: dissolution of soluble rocks by water.<br>
+      <mark>Karst gulf</mark>: huge sinkhole. can be hundreds of meters in depth and can contain many smaller sinkholes.<br>
+      <mark>Karst forest</mark>: Contains relatively undisturbed ecosystems with soils of high pH <br>
+      <mark>Kegel karst</mark>: cone karst. Domed karstic topography. cone-shaped karst hills, steep slopes and surrounded by a depression which is usually referred to as a star. type of tropical karst terrain with numerous cone-like hills, formed by cockpits, mogotes, and poljes and without strong fluvial erosion processes. Tend to be hilly/have mountainous features. Forms in tropical regions without strong fluvial erosion processes <br>
+      <mark>Karst window/fenster</mark>: developed by collapse of bedrock. Hole in ground. <br>
+      <mark>Lag time in Karst Topo</mark>: Longer; Karst areas are well drained with little runoff, which results in the time difference between precipitation and peak discharge to be longer. <br>
+      <mark>Limestone</mark>: purer the limestone is, higher its ability to form karst. Carbonic acid dissolves limestone. <br>
+      <mark>Mogote</mark>: a karst formation that consists of an isolated residual hill with steep sides, normally surrounded by flat alluvial plains.t likely formed in shallow water, as they are formed through limestone layers that are deposited over time. Water catchment area.<br>
+      <mark>Paleokarst</mark>: Karstic layer buried by younger rocks<br>
+      <mark>Palsa</mark>: mounds of permanently frozen peat and soil core <br>
+      <mark>Polje</mark>: extensive depression having a flat floor and steep walls but no outflowing surface stream and found in a region having karst topography. Flat floored depression. can become wet-season lakes. large flat plain surrounding karstic regions <br>
+      <mark>Ponor</mark>: natural opening where surface water enters into underground passages <br>
+      <mark>Pseudokarst</mark>: similar to karst, not formed from rock dissolution. <br>
+      <mark>Pumping groundwater</mark>: problematic because it lowers water table. If water table is lowered to a certain level, then cracks/holes in the landscape opens up, letting pressure, which held up the ceiling of the sinkhole, out, creating a sinkhole. <br>
+      <mark>Rhythmic spring</mark>: intermittent. cold water spring from which the flow of water either varies or starts and stops entirely, over a fairly regular time-scale of minutes or hours <br>
+      <mark>Rimstone</mark>: A calcareous deposit formed as a ring around an overflowing basin (as of a mineral hot spring) <br>
+      <mark>Runnel (karst)</mark>: narrow channel in ground for liquid to flow through <br>
+      <mark>Salt karst</mark>: Can lead to surface collapses presenting geohazards <br>
+      <mark>Sinkhole</mark>: cavity in the ground, especially in limestone bedrock, caused by water erosion and providing a route for surface water to disappear underground. Not all these are karst. Water table lowers, cave roof  collapse, excess withdrawal of groundwater   <br>
+      <mark>Solution pipe</mark>: near vertical drop formed near joint intersections in a karstic environment <br>
+      <mark>Speleothems</mark>: formation by mineral deposits. CaCO3 minerals, either calcite or aragonite. Ex: stalactites, stalagmites, flowstones, cave coral, cave drapery, cave curtains, and cave crystals <br>
+      <mark>Springs</mark>: Groundwater emerges within a few days of precipitation. Intermittent. <br>
+      <mark>Stalactite</mark>: hangs from the ceiling of a cave and is produced by precipitation of minerals from water dripping through the cave ceiling. The cave roof was above the water table when the speleothems formed <br>
+      <mark>Stalagmites</mark>: upward-growing mound of mineral deposits that have precipitated from water dripping onto the floor of a cave.<br>
+      <mark>Static karst</mark>: a momentary state. Type of karst. Azonal and zonal  <br>
+      <mark>Steephead valley</mark>: blind valley <br>
+      <mark>Syngenetic karst</mark>: Concurrent speleogenesis and lithogenesis <br>
+      <mark>Talik</mark>: unfrozen ground in a region with permafrost <br>
+      <mark>Thermokarst</mark>:  Irregular surface of marshy hollows as ice-rich permafrost thaws. Karst in permafrost. Pitted surfaces with marshy hollows and small hummocks <br>
+      <mark>Tor</mark>: castle koppie, kopje. Granites but also schists. Not karst but is pseudokarst <br>
+      <mark>Tower karst</mark>: Karst region with large, tall, steep-sided mountains of soluble rock <br>
+      <mark>Turlough</mark>: Unique type of seasonal lake found in Irish karst areas which are formed through the annual welling-up of water from the underground water system <br>
+      <mark>Uvala</mark>:  Coalescence of dolines <br>
+      <mark>Vauclusian spring</mark>: karst spring. spring that originates from a shaft or a cave system, with the water surging upwards under relatively high pressure <br>
+      <mark>Yedoma</mark>: pleistocene aged permafrost rich in organics <br>
+      <mark>Zonal</mark>: climate and biogenic dependent <br> 
+ 
+
+ 
+      
+    </p>
+
+    <h2 id="lake-qualities"><br><br><br><br>Lake Qualities</h2>
+    <p>
+      <mark>Anoxia</mark>: no oxygen <br>
+      <mark>Amictic</mark>: permanently ice-covered and do not circulate. May still exhibit mixing: by solar heating through the ice or heating from the sediment. Can exhibit internal waves; they’re stratified. <br>
+      <mark>Aphotic zone</mark>: portion of a lake or ocean where there is little or no sunlight. &lt;1% sunlight. <br>
+        <mark>Benthic</mark>: Located on the bottom of a body of water or in the bottom sediments. “Lake’s digestive system” <br>
+      <mark>Benthos</mark>: at the lowest level of a body of water such as an ocean, lake, or stream, including the sediment surface and some sub-surface layers <br>
+      <mark>Dimitic</mark>: mixes freely twice/year (once in spring and fall), is thermally stratified in the summer; has stable temperature in winter. exhibit inverse temperature stratification in winter. <br>
+      <mark>Effluent stream</mark>: stream which picks up water from saturated zone. <br>
+      <mark>Endorheic</mark>: having no outflow to external body of water such as river or ocean; only water through evaporation or seepage into the ground. Endorheic lakes where dissolved salts accumulate due to evaporation being the only outlet are saltier than the ocean.  <br>
+      <mark>Epilimnion</mark>: upper, well:circulated, warm layer of a thermally stratified lake. (Refer to Hypolimnion and Metalimnion) <br>
+      <mark>Epilithic</mark>: Algae which grows on top of rock. <br>
+      <mark>Epilittoral</mark>: zone above water level entirely that is never touched by water levels.  <br>
+      <mark>Epipelic</mark>: algae which grows on sediments<br>
+      <mark>Epiphytic</mark>: algae growing on macrophytes<br>
+      <mark>Epipsammic</mark>: algae growing on or within sand<br>
+      <mark>Epipheratic zone</mark>:  the zone between pheretic and saturated zone.  zone between the vadose (unsaturated) zone above and phreatic (saturated) zone below. <br>
+      <mark>Epizooic</mark>: Algae growing on animals <br>
+      <mark>Eutrophic</mark>: Nutrient rich water, characterized by high level of biological production. Low oxygen concentrations.. Algal blooms, poor water quality, low oxygen content, dead zones <br>
+      <mark>Euxinia</mark>: sulfur rich, oxygen poor<br>
+      <mark>Exorheic</mark>: lakes that drain into a river or other body of water that eventually reach the ocean. <br>
+      <mark>Flushing</mark>: lake retention time. calculated average time that water (or a dissolved substance) spends in a lake. At its simplest this figure is the result of dividing the lake volume by the flow in or out of the lake.<br>
+      <mark>Halocline</mark>: sharp discontinuity in ocean salinity at depth. Caused by difference in density.<br>
+      <mark>Hardwater</mark>: high concentration in Ca+2 and Mg+2. Has a high buffering capacity and is not generally sensitive to acid deposition.<br>
+      <mark>Holomictic</mark>: circulate throughout entire water column at some time during the calendar year<br>
+      <mark>Homopycnal</mark>: equally dense as water they enter<br>
+      <mark>Humic</mark>: extreme lack in nutrients<br>
+      <mark>Hyperpycnal</mark>: more dense than water they enter<br>
+      <mark>Hypolimnion</mark>: cold, dense, anoxic water. Bottom layer. <br>
+      <mark>Hypopycnal</mark>: less dense than water they enter<br>
+      <mark>Hyporheic zone</mark>: interstitial habitat penetrated by animals, bioactive zone, ecotone between streambed, transition. Transition between areas of surface water and groundwater flow<br>
+      <mark>Hypoxia</mark>: low amounts of oxygen <br>
+      <mark>Influent stream</mark>: Loses water to ground. Disappearing. Likely in arid areas. Karst landscapes.<br>
+      <mark>Lake overturn</mark>: limnic eruption. <br>
+      <mark>Limnically active</mark>: volcanic activity, and other explosive events can serve as triggers for limnic eruptions. Exploding lakes. CO2-saturated incoming water. A cool lake bottom indicating an absence of direct volcanic interaction with lake waters.<br>
+      <mark>Littoral</mark>: Shoreline zone of lake where sunlight penetrates to bottom; is sufficient to support rooted plant growth. Cattails, rooted plants grow here, emergent plants. <br>
+      <mark>Lentic</mark>: Standing waters such as ponds and lakes. <br>
+      <mark>Lotic</mark>: Running waters such as streams and rivers.<br>
+      <mark>Mesotrophic</mark>: moderate amount of dissolved nutrients. Submerged aquatic plants, medium oxygen levels<br>
+      <mark>Metalimnion</mark>: Middle layer of water in thermally stratified lake, between the epilimnion + hypolimnion, where decrease in temp with depth is at its greatest.<br>
+      <mark>Metaphyton</mark>: Algae present in littoral zone that’s not in state of suspension or attached to substratum <br>
+      <mark>Minerotrophic</mark>: environments that receive nutrients primarily through groundwater that flows through mineral:rich soils or rock, or surface water flowing over land.<br>
+      <mark>Monomictic (Cold Lakes)</mark>: Lakes with water temperatures <= 4C and with only one period of circulation in the summer. Typically found in Arctic or mountains and although they may be ice: free for brief periods in summer, they are in frequent contact with glaciers/permafrost.<br>
+        <mark>Monomictic (Warm Lakes)</mark>: Lakes with water temperatures >4C and circulate freely in the winter. These lakes stratify directly in the summer. Warm monomictic lakes are common to warm regions of the temperate zones, in particular in areas influenced by ocean climates and in mountainous areas of subtropical latitudes. <br>
+        <mark>Oligomictic lakes</mark>: irregular turnover and generally warm. <br>
+        <mark>Oligotrophic</mark>: Nutrient poor waters, generally characterized by low biological production (Refer to Eutrophic and Mesotrophic). Clear water, high drinking water quality while oxygenated, most common in cold regions under laid by resistant igneous rock, low algal products<br>
+        <mark>Ombrotrophic</mark>: (of bog or its vegetation) dependent on atmospheric moisture for its nutrients.<br>
+        <mark>Pelagic zone</mark>: region of lake, river or ocean that is not associated with the shore or the bottom<br>
+        <mark>Polymictic</mark>: shallow lakes that mix more than 2/year. Low density range. May mix on daily basis or every few days. <br>
+        <mark>Profundal zone</mark>: below the Euphotic Zone. hypolimnion. located under the thermocline where the sunlight does not penetrate the water<br>
+        <mark>Pycnocline</mark>: a layer in an ocean or other body of water in which water density increases rapidly with depth.<br>
+        <mark>Rheotropic</mark>: growth of a plant or immobile/sessile animal in the direction of a current of water. Tendency of certain living things to move in response to mechanical stimulus of water current <br>
+        <mark>Thermocline</mark>: transition layer between the warmer mixed water at the surface and the cooler deep water below. Water below this is calm, above is mixed. <br>
+        <mark>Turnover</mark>: Due to seasonal changes in sunlight intensity, surface water temperature begins to transition in the spring and fall. In the spring, water surface warms. This causes the temperature of the top and bottom layers of the lake to equalize. With the help of strong winds, this new equilibrium breaks the thermal stratification, and the lake is able to mix. Oxygen from the surface mixes with the bottom, while nutrients trapped near the bottom are free to mix throughout the lake.<br>
+        <mark>Seasonal Lake Changes</mark>: Spring: lake turnover<br>
+Summer: most temp stratification. Thermocline deepest. <br>
+Fall: lake turnover<br>
+Winter: dissolved oxygen highest<br>
+        
+
+
+
+
+      
+    </p>
+    
+    <h2 id="landforms"><br><br><br><br> Landforms and "River" forms</h2>
+    <p>
+      <mark>Aeolian landforms</mark>: Landforms produced by action of the winds are formed by the wind and include: Dry lake – Basin or depression that formerly contained a standing surface water body, Sandhill – Type of ecological community or xeric wildfire-maintained ecosystem, Ventifact – Rock that has been eroded by wind-driven sand or ice crystals, Yardang – Streamlined aeolian landform <br>
+      <mark>Alcove</mark>:  steep-sided hollow in the side of an exposed rock face or cliff of a homogeneous rock type, that was water eroded.
+Alluvial channel: parts of rivers that continuously change in shape as patterns of water flow, sediment erosion, and deposition alter over time. Free to adjust, due to loose sediments they carry/deposit <br>
+      <mark>Alluvial fan</mark>: triangle-shaped deposit of gravel, sand, and even smaller pieces of sediment, such as silt. Require formation of distributaries . displays sheet flooding. Gets picked up by a flowing body of water (a river or stream) and is transported to the alluvial fan. The particle has to travel through the feeder canyon, past the apex (or narrow point), and then is spread out on the fan. <br>
+      <mark>Alluvium</mark>: loose clay, silt, sand, or gravel that has been deposited by running water in a stream bed, on a floodplain, in an alluvial fan or beach, or in similar settings. <br>
+      <mark>Anabranching stream</mark>: A type of distributary river channel that separates from its trunk stream and may flow parallel to it for several km before rejoining it. formed through meander bend cutoffs, channel avulsions (abandonment of an entire channel segment), or mid-channel deposition and subsequent vegetation <br>
+      <mark>Anastomosed streams</mark>: stable, vegetated islands, in regionals with intense deposition, on flatter gradients. Vein like. contains semi-permanent channels separated by wider floodplains <br> 
+      <mark>Arete</mark>: thin, jagged crest that separates—or that once separated—two adjacent glaciers. knife-edge ridge. It is formed when two neighboring corries run back to back <br>
+      <mark>Arroyo</mark>: A dry river, creek or stream bed. formed by the action of fast:flowing water in an arid or semi-arid region, found chiefly in the southwestern US. <br>
+      <mark>Artificial levee</mark>: Reduction of aquifer recharge, decrease in species diversity of adjacent floodplain <br>
+      <mark>Atoll</mark>: ring-shaped coral reef, island, or series of islets <br>
+      <mark>Backswamp</mark>: Floodplain wetland formed by natural levees. <br>
+      <mark>Bajada</mark>: a broad slope of alluvial material at the foot of an escarpment or mountain. intersection of multiple alluvial fans
+Bar: elevated region of sediment (such as sand or gravel) that has been deposited by the flow. <br>
+      <mark>Bayou</mark>: slow-moving creek or a swampy section of a river or a lake <br>
+      <mark>Bedrock channel</mark>: paths that are eroded and that cut through bedrock, or foundations of solid rock. Can have potholes (circular depressions). Not free to adjust due to solid confines of rock. Likely found head of stream. <br>
+      <mark>Braid bars</mark>: middle channel bars. <br> 
+      <mark>Braided channel</mark>: forms in a channel due to low streamflow or increase in stream load. When a river carries a lot of sediment, it deposits in the middle of the stream to create islands in the middle and create the unique braided stream formation. More ephemeral. Flows in shallow interconnecting channels. Develops where there’s excess sediment deposition. Water flows onto both sides and that continues to happen, until the channel has many channels and braids. Erodible banks, abundance of coarse sediment, rapid/frequent variations in discharge. For Glacial streams: Discharge varies seasonally and glacier provides large sediment load; Braided with peak discharge in late summer.  <br>
+      <mark>Butte</mark>: tall, flat-topped, steep-sided towers of rock. Buttes were created through the process of erosion, the gradual wearing away of earth by water, wind, and ice. Buttes were once part of flat, elevated areas of land known as mesas or plateaus. Smaller than plateau.<br>
+      <mark>Caliche</mark>: sediment or soil that has been cemented together, often with calcite, in an arid or semiarid region. <br>
+      <mark>Catchment</mark>: the area of land drained by a single stream or river. factors: topography, shape, size, soil, land use  <br>
+      <mark>Cavern</mark>: when slightly acidic rain seeps into cracks in limestone bedrock, dissolving the rock and enlarging the cracks <br>
+      <mark>Chute</mark>: loop that shortens and straightens course of stream. New channel formed across base of meander. <br>
+      <mark>Clint</mark>: dense rock surrounded by less resistant rock that over a very long time erodes, leaving just the hard rock surrounded by relatively flat terrain <br>
+      <mark>Colluvium</mark>: loose, unconsolidated sediments that have been deposited at the base of hillslopes   <br>
+      <mark>Colluvial fan</mark>: created by mass wasting <br>
+      <mark>Constructional delta</mark>: river-dominated. elongate (digitate, bird foot), lobate <br>
+      <mark>Continental divide</mark>: divide that defines the point where water on one side will flow to one ocean while water on the other flows to a different ocean  <br> 
+      <mark>Crevasse splay</mark>: sedimentary fluvial deposit which forms when a stream breaks its natural or artificial levees and deposits sediment on a floodplain. deposits sediments in a similar pattern to an alluvial fan deposit.  <br>
+      <mark>Deltas</mark>: area of low, flat land shaped like a triangle, where a river splits and spreads out into several branches before entering the sea. 3 bedding types: (finest→coarsest): bottomset (suspension; horizontal), topset (traction; materials dropped on top of delta; horizontal), forest (gravity gliding; gently inclined). Requires formation of distributaries. Arcuate delta: on Nile; most common type. Gently curving shoreline, smoothed by longshore currents. Dominated by course material. Bird foot deltas: finger-like projections reach out to sea (Mississippi River delta). Broad, shallow shelves. long thin shape (bird's toe). 2 things classify. shape OR influencing factor. Lower delta: most influenced by the waves and tides <br>
+      <mark>Destructional delta</mark>: tide/wave-dominated. cuspate. ie Tiber Delta, La Rhone the, Nile  <br>
+      <mark>Dike</mark>: dyke. a large slab of rock that cuts through another type of rock <br>
+      <mark>Doline</mark>: naturally enclosed depressions  <br>
+      <mark>Drunken trees</mark>: Also tilted trees, or a drunken forest, is a stand of trees rotated from their normal vertical alignment. Form when ice-rich permafrost thaws. <br>
+      <mark>Dry valley</mark>: valley not created by sustained surface water flow <br>
+      <mark>Esker</mark>: long, winding ridge of stratified sand and gravel, examples of which occur in glaciated and formerly glaciated regions of Europe and North America <br>
+      <mark>Eyot</mark> :a small island. Braided channels are separated by eyots. <br>
+      <mark>Fetch</mark>: area of ocean or lake surface over which the wind blows in an essentially constant direction, thus generating waves. Relates to wave height <br>
+      <mark>Frost heaves</mark>: form of frost action, a physical weathering process involving the cyclic freezing and thawing of water in soil or rock <br>
+      <mark>Fjord</mark>: long, narrow, deep inlet of the sea between high cliffs, as in Norway and Iceland, typically formed by submergence of a glaciated valley. <br>
+      <mark>Floodplain</mark>: flat area of land next to a river or stream. <br>
+      <mark>Flumes</mark>: Human made channel for water; measures flow of water in open channels. In the form of a gravity chute that leads water from a diversion dam or weir completely aside a natural flow. <br>
+<mark>Foibe</mark>: vertical sinkhole. Deep.  <br> 
+      <mark>Gaining stream</mark>: Stream or reach of a stream whose flow is being increased by inflow of groundwater. Gains water from the aquifers nearby. Water table above stream surface <br>
+      <mark>Geyser</mark>:  hot spring that discharges intermittent jets of steam and water. Water near geyser chamber slowly evaporates off, lessening pressure on the rest of the water in the chamber. This lowers boiling point for deeper water, allowing that water to boil and evaporate. This causes positive feedback loop that results in a decrease in water pressure and hence eruption of water from geyser. Wider chamber = less powerful <br>
+      <mark>Gilbert Delta</mark>: formed by clearwater river that enters freshwater lake. Fluvial dominated delta formed from coarse sediments. Linked with tectonically active settings.  <br>
+      <mark>Gorge</mark>:  narrow valley with steep, rocky walls located between hills or mountains <br>
+      <mark>Graben</mark>: piece of Earth's crust that is shifted downward <br>
+      <mark>Grike</mark>: opening in rock widened by natural forces (as weathering or solution). Acidic water dissolves rock, new water flows into thes indented areas, repeat forming a tile like pattern <br>
+      <mark>Gulch</mark>: A deep V-shaped valley formed by erosion. Small ravine. <br>
+      <mark>Gully</mark>: Smaller than a gulch. A trench cut into land by the erosion of an accelerated stream of water. <br>
+      <mark>Holokarst</mark>: Entirely soluble (karsitic) rock, 
+Horst: piece of Earth’s crust that’s shifted upward <br>
+      <mark>Impoundment</mark>: reservoirs. Confined within enclosures. created by dams <br>
+      <mark>Incised meanders</mark>: when stream cuts downward below original floodplain and it keeps meandering course as it erodes the bed. Stream terrace: abandoned flood plain <br>
+      <mark>Inselberg</mark>: an isolated hill or mountain rising abruptly from a plain. <br>
+      <mark>Inverted deltas</mark>: rare, only 1 river reaches bay or sea, occurs when river empties into dry land <br>
+      <mark>Kame</mark>: An irregularly shaped hill or mound composed of sand, gravel; accumulates in a depression on a retreating glacier, and is then deposited on the land surface with further melting of the glacier. <br>
+      <mark>Kettles</mark>: A depression in a glacial outwash drift made by the melting of a detached mass of glacial ice. <br> 
+      <mark>Lacustrine plains</mark>: Lakes that get filled up by sediments brought down by rivers and turn into plains. <br>
+      <mark>Levee</mark>: an embankment built to prevent the overflow of a river OR a ridge of sediment deposited naturally alongside a river from overflowing water <br>
+      <mark>Lithalsa</mark>: pingo. In permafrost areas.  <br>
+      <mark>Loess</mark>: formed by accumulation of wind-blown dust <br>
+      <mark>Losing stream</mark>: loses water because water infiltrates into the ground since the water table is lower than the channel level. Stream or reach of a stream in which water flows from the stream bed into the ground. Synonymous with influent streams. Water table beneath stream base or between surface and stream base. <br>
+      <mark>Knickpoints</mark>: where the stream’s slope abruptly changes at a single point. 2 major types: break‐in‐gradient and break‐in‐elevation knickpoints. Formed by: isostatic rebound, tectonic uplifting, decreased ocean water influx <br>
+      <mark>Meanders</mark>: produced when water in the stream channel erodes the sediments of an outer bend of a streambank and deposits this and other sediment on subsequent inner bends downstream. Sinuosity >1.5. <br>
+      <mark>Meander scroll</mark>: sediment formation marking former channel locations. <br>
+      <mark>Merokarst</mark>: karstic rock is interrupted by other types <br>
+      <mark>Monadnocks</mark>: isolated hill or ridge or erosion-resistant rock rising above a peneplain. <br>
+      <mark>Natural levee</mark>: embankments formed naturally after a river floods and recedes. Flooding rivers form this: Friction with floodplain when water overflows the stream bank causes velocity of water to decrease, sediment is deposited.  <br>
+      <mark>Nested fill terrace</mark>: terrace forms when a previously filled valley terrace is eroded and refilled with less sediment <br>
+      <mark>Ognip</mark>: collapsed pingo <br>
+      <mark>Outwash fan</mark>: Fan-shaped body of sediments deposited by braided streams from a melting glacier. <br>
+      <mark>Palsa</mark>: A low, often oval, frost heave occurring in polar and subpolar climates. formed by the migration of groundwater to a freezing plane.  <br>
+      <mark>Peneplain</mark>: low relief featureless plain from stream erosion <br>
+      <mark>Pingo</mark>: development of permafrost around edges of dried up lake gives rise to pingos as water from the lake pushed toward center. formed in previous lakes that were surrounded by permafrost. Canada (Tuktoyaktuk peninsula) has the most pingos. Types: hydrostatic (aka closed-system, regions underlain by continuous permafrost) or a hydraulic (aka open- system;occur in regions of discontinuous permafrost). Formation: water rises up by hydraulic pressure through gaps in permafrost, freezes, and uplifts mound of ice covered by the ground. contain well-drained surface layers which provide the right conditions for vegetation to grow. <br>
+      <mark>Pingo-Like features</mark>: PLFs might be formed from methane released from decomposing gas hydrates at depth.  <br>
+      <mark>Playa</mark>: dry lake bed. <br>
+      <mark>Plunge pool</mark>: Depression formed under waterfall. bottom of a knickpoint or waterfall where there is a deep pull from constant erosion <br>
+      <mark>Point bars</mark>: depositional feature made of alluvium that accumulates on the inside bend of streams and rivers below the slip-off slope. Abundance in meandering streams. Reflects river capacity. When flooded: it accumulates debris/driftwood; can also be flooded. <br>
+      <mark>Polgie</mark>: “field”, elongated basin having a flat floor and steep walls; it is formed by the coalescence of several sinkholes. <br>
+      <mark>Potholes</mark>: a circular/cylindrical hole in riverbed which is produced by force of water and abrasion. Formed when circular water current carrying small pebbles and sediment begins to wear away a rock surface. formed from long-lived turbulent whirlpools containing sand or gravel. <br>
+      <mark>Ravine</mark>: Deep, narrow gorge with steep sides. Narrower than a canyon and is often the product of stream-cutting erosion. Bigger than gulch. <br>
+      <mark>Regolith</mark>: layer of unconsolidated rocky material covering bedrock. <br>
+      <mark>Riffles</mark>: A shallow place in a river where water flows quickly past rocks. Area of fast moving water over coarse substrate. <br>
+      <mark>Rill</mark>: Shallow channel in the soil caused by runoff <br>
+      <mark>Riparian zones</mark>, or area: lands that occur along the edges of rivers, streams, lakes, and other water bodies <br>
+      <mark>Riprap</mark>: Large rocks placed along the bank of a waterway to prevent erosion <br>
+      <mark>Saddle</mark>:  lowest point on the line tracing the drainage divide connecting the peaks <br>
+      <mark>Salt pan</mark>: occurs when a lake starts to dry up and minerals remain on the surface. flat expanses of ground covered with salt and other minerals, usually shining white under the sun. salt flats <br>
+      <mark>Sandspit</mark>: a narrow point of sandy land projecting into the sea. <br>
+      <mark>Scroll bar</mark>: long curving parallel ridge that was aggregated during high water against the inner bank of a meandering channel while the opposite bank experienced erosion. They are former locations of a point bar and produce ridge and swale topography <br>
+      <mark>Sea caves</mark>: littoral caves. cave formed primarily by the wave action of the sea <br>
+      <mark>Shutter ridge</mark>: ridge which has moved along a fault line, blocking or diverting drainage.  <br>
+      <mark>Slough</mark>: swamp or shallow lake system, usually a backwater to a larger body of water. <br>
+      <mark>Splay</mark>: Delta-shaped deposit of coarser sediments that occurs when a natural levee is breached. Can prevent floodwaters from returning to the channel when floodwaters <br>
+      <mark>Stack</mark>: geological landform consisting of a steep and often vertical column or columns of rock in the sea near a coast, formed by wave erosion  <br>
+      <mark>Tarns</mark>: small mountain lake. Forms in glacially-carved cirques. <br>
+      <mark>Terrace</mark>: step-like landform. Formed by downcutting/cutting down. <br>
+      <mark>Vernal pools</mark>: Small pools form in springtime from snow melt and rain, with the basin sealed by frozen soil. Also vernal ponds or ephemeral pools. Seasonal depressional wetlands. <br>
+      <mark>Wadi</mark>: carved by streams and rivers which later dried up <br>
+      <mark>Waterfall</mark>: cascades. river or other body of water's steep fall over a rocky ledge into a plunge pool below. Types: Ribbon, Horsetail, Plungepool, Punchbowl, Block, Fan, Cascade, Segmented, Chute, Tiered; hard over soft rock. Forms: hard over soft rock. Soft rock begins to erode as river water flows over it, which occurs faster than the erosion of the hard rock. This results in the hard rock being elevated above the stream bed below and vertical drop forms with further erosion. Eventually plunge pool forms below river. Hard rock also erodes and gets carried down the river which enlarges the plunge pool, forming a gorge. Flows from hanging valley.  <br>
+      <mark>Watershed</mark>: where all flowing surface water converges to a single point, such as a river mouth, or flows into another body of water. Ocean basins aren’t watersheds bc multiple rivers flow into them. Transported and Residual soil <br>
+      <mark>Wind gap</mark>: gap through which a waterway once flowed that is now dry as a result of stream capture <br>
+      <mark>Yazoo stream</mark>: tributary stream that runs parallel to, within floodplain of a larger river for considerable distance, before eventually joining it. Forms through natural levees or through glacial processes. When a tributary river can’t reach the main river it flows parallel to the river causing a yazoo stream <br>
+      <mark>Yedoma</mark>: Organic-rich Pleistocene-age permafrost with high ice content
+
+    </p>
+    <h2 id="melting-types"><br><br><br><br>Melting Types</h2>
+    <p>
+      <mark>Decompression melting</mark>: caused by lowering pressure. Rock moved towards the surface. <br>
+      <mark>Flux melting</mark>: caused by adding volatiles. <br>
+      <mark>Heat-induced melting</mark>: caused by increasing temperatures<br> 
+      <mark>Partial melting</mark>: the transformation of some fraction of the mass of a solid rock into a liquid as a result of decompression, heat input, or addition of a flux<br>
+    </p>
+
+    <h2 id="mineral-properties"><br><br><br><br>Mineral Properties </h2>
+    <p>
+      <mark>Cleavage</mark>: different minerals break in different ways. Form in direction where bonds holding atoms together in the crystal are weakest. Conchoidal fractures: smooth clamshelled shaped curves. <br> 
+      <mark>Color</mark>: The color you see represents the wavelength the mineral does not absorb. Ex: Trace amounts of iron may give quartz a reddish color. <br>
+      <mark>Fluorescence</mark>: works for some minerals. Distinctive.<br>
+      <mark>Diaphaneity</mark>: how transparent a mineral is. Ability for light to pass through a mineral. Examples: Opaque, transparent, semitransparent, translucent <br>
+      <mark>Habit</mark>: General appearance a mineral has. <br>
+      <mark>Hardness</mark>: relative ability of how it resists scratching. Mohs hardness scale<br>
+      <mark>Luster</mark>: How minerals scatter light. How light reflects off a mineral. Metallic or non-metallic lusters. Metallic: light doesn’t pass through metals. Examples: Silky, glassy, satiny, resinuous, pearly, earthy, vitreous (glassy), greasy, metallic, dull, adamantine (hard; unbreakable) <br>
+      <mark>Specific gravity</mark>: mineral density. Ratio: weight of volume of mineral and weight of equal water volume at 4C <br>
+      <mark>Streak</mark>: Color of powder produced by pulverizing the mineral. Less variable than color. Provides reliable clues to mineral identity. Calcite always yields white streak. Only work for minerals up to 6.5 hardness <br>
+      <mark>Twinning:</mark>: intergrowth of adjacent crystals sharing lattice. 3 Causes: During crystal growth- interruption of lattice during formation. From transformation- transformation to a more stable crystal structure. By deformation: mechanical stress (like pressure). 2 Types: contact (shares a single plane/face) and penetration (shares a rotation/single axis).<br>
+      
+
+    </p>
+    <h2 id="ologies"><br><br><br><br>Ologies</h2>
+    <p>
+      <mark>Geology</mark>: science that deals with the earth's physical structure and substance, its history, and the processes that act on it.<br>
+      <mark>Geomorphology</mark>: The study of present-day landforms. constitution (chemical and physical properties described by material property variables), configuration (size and form described by geometry variables), and mass flow (rates of flow described by such mass- flow variables as discharge, precipitation rate, and evaporation rate) <br>
+      <mark>Glaciology</mark>: study of glaciers<br>
+      <mark>Hydrogeology</mark>: study of groundwater<br>
+      <mark>Limnology</mark>: Study of the biology, chemistry, physics of freshwater lakes and ponds.<br>
+      <mark>Lithology</mark>: The study of rocks <br>
+      <mark>Paleolimnology</mark>: studies ancient lakes from their sediments and fossils<br>
+      <mark>Palynology</mark>: study of pollen<br>
+      <mark>Petrology</mark>: The study of rocks and conditions by which they form<br>
+      <mark>Potamology</mark>: study of rivers<br>
+      <mark>Orology</mark>: The study of mountains and their mapping<br>
+      <mark>Stratigraphy</mark>: Concerned with order/relative position of strata; their relationship to geological time scale.<br>
+
+
+    </p>
+
+    <h2 id="plate-boundaries"><br><br><br><br>Plate Boundaries</h2>
+    <p>
+      <mark> Active continental margin</mark>: a coastal region that is characterized by mountain-building activity including earthquakes, volcanic activity, and tectonic motion resulting from movement of tectonic plates. <br>
+      <mark>Continental margin</mark>: the edge of a continent rather than the edge of a plate.<br>
+      <mark>Convergent</mark>: When two plates come together. Flux melting occurs here. Subducted plate sinks 2-8 cm / year. Andesitic. Reverse faults found: compressional forces (contraction of surface). 3 types: Ocean-Continent, Continent-Continent, Ocean-Ocean. Features: trenches, island arcs, etc.<br>
+      <mark>Divergent</mark>: When two tectonic plates move away from each other. Decompression melting occurs here. Basaltic: As the plates move apart, pressure on the underlying mantle is reduced and it partially melts to form basalt magma. Normal faults found (tensional forces). Features: rift valleys, ocean ridges, fissure vents, etc.<br>
+      <mark>Passive continental margins</mark>: the transition between oceanic and continental crust which is not an active plate boundary.
+      <br>
+      <mark>Plate Margin</mark>: the specific edges or borders where two plates interact.<br>
+      <mark>Submergent coast:</mark> Where sea level is rising faster than land is rising, or where coastal areas are sinking. Associated with passive continental margins with wide coastal plains and continental shelves. <br>
+      <mark>Transform</mark>: Places where plates slide sideways past each other. Shear stress. Example: San Andreas Fault. Volcanoes do not typically occur at these boundaries: there is little/no magma available here. Strike slip fault found. Crust not created/destroyed. 
+    </p>
+    <h2 id="pollution"><br><br><br><br>Pollution</h2>
+    <p>
+
+      <mark>Biofilters</mark>: used on mechanical ventilation livestock buildings to treat the ventilation air.  <br>
+      <mark>Bioremediation</mark>: process that uses living organisms to remove pollutants. <br>
+      <mark>Coastal pollution</mark>: in U.S. Industrial waste and sewage is most cause <br>
+      <mark>Contamination</mark>: Addition to water of substance/property preventing use/reducing usability of water. Sometimes synonymous with pollution. Ex: Asphalt Plants, Chemical Manufacturing/Storage, Electronics Manufacturing/Electroplaters, Mining/Mining Damage, Petroleum/Petrol Pollutants, Pipelines, Septic Systems, Toxic Waste Spills, Wells, Storage Tanks, Wood Preserving Facilities, Metal Fabricators/Metal Industry <br>
+      <mark>Groundwater pollution</mark>: sewage from septic tanks and cesspools (bacterial/viral contamination). Wastewater from factories, farms, and municipal sewage treatment plants are stored in basins, ponds/lagoons. Polluted water seeps downward to contaminate groundwater. solution: landfills and waste treatment ponds should be built over layer of impermeable material so contaminants are isolated from aquifers. <br>
+      <mark>Nonpoint source</mark>: Any source, other than a point source, which discharges pollutants into air or water. Sources originating over broad areas, such as areas of fertilizer & pesticide application/leaking sewer systems, rather than from discrete points. <br>
+      <mark>Nuclear power plants</mark>: rely heavily on water for cooling, and during the cooling process, water comes in contact with radioactive substances. If not disposed of correctly or not filtered properly, the water could threaten groundwater, surface water, and other water sources. <br>
+      <mark>Plume</mark>: flow of contaminated groundwater within aquifer <br>
+      <mark>Plume treatment</mark>: Leachate from an unlined landfill has contaminated the water in an aquifer. <br>
+      <mark>Point source</mark>: any single identifiable source of pollution from which pollutants are discharged, such as a pipe, ditch, ship, sewage treatment plants, or factory smokestack. <br>
+      <mark>Pollutant</mark>: Any substance which after release into the environment & upon exposure, ingestion, inhalation, or assimilation into any organism, either directly from the environment or indirectly by ingestion, will or may reasonably be anticipated to cause death, disease, behavioral abnormalities, cancer, genetic mutation, etc. <br>
+      <mark>Pollution</mark>: presence in or introduction into the environment of a substance or thing that has harmful or poisonous effects <br>
+      <mark>Water pollution</mark>: Sources: Industrial Waste, Marine Dumping, Sewage and Wastewater, Oil Leaks and Spills, Agriculture, Global Warming, Radioactive Waste. How to reduce: Properly dispose of hazardous household items. Reduce or eliminate use of fertilizers and chemical herbicides and pesticides. Make an appointment to service your septic system. <br>
+      
+    </p>
+
+    <h2 id="rock-intrusions"> <br><br><br><br>Rock Intrusions</h2>
+    <p> 
+      <mark>Batholiths</mark>: stocks (smaller); large irregular shaped plutons. Large mass of intrusive igneous rock, forms from cooled magma deep in Earth’s crust. Made mostly of felsic or intermediate rock types (ex: granite, quartz monzonite, diorite) <br>
+      <mark>Country rock</mark>: surrounding rock. Magma intrudes into country rock by pushing it aside or melting through it. <br>
+      <mark>Dyke</mark>: Dike. discordant. Cut across layering. If country rock has no bedding or foliation, any tabular body within it is a dyke <br>
+      <mark>Laccolith</mark>: sill like body that has expanded upward by deforming overlying rock <br>
+      <mark>Ophiolite</mark>: former oceanic crust, due to plate tectonics, became embedded into continental crust and exposed above sea level. often top of continental lithosphere. Forced above sea level through tectonic activity. Thrusted/obducted onto the edge of continental plates. Assemblage of mafic and ultramafic lavas.  <br>
+      <mark>Pipe</mark>: cylindrical body; feed volcanoes. Also connect plutons. <br>
+      <mark>Pluton</mark>: body of intrusive igneous rock that crystallized from magma cooling below surface  <br>
+      <mark>Sill</mark>: concordant/parallel to existing layering in country rock<br>
+      <mark>Xenoliths</mark>: a piece of rock trapped in another type of rock. <br>
+
+    </p>
+
+    <h2 id="rock-types"> <br><br><br><br>Rock Types </h2>
+    <p>
+      <mark>Igneous rocks</mark>: Form when hot, molten rock crystallizes and solidifies. Types: intrusive, extrusive. <br>
+      <mark> Intrusive rocks</mark>: Also plutonic rock. Igneous rock formed from magma forced into older rocks at depths within the Earth's crust. Cools/solidifies slowly below Earth's surface. <br>
+      <mark>Extrusive rocks</mark>: produced when magma exits and cools above (or very near) the Earth's surface. Cooling takes place quickly. <br>
+      <mark>Metamorphic rocks</mark>: form when rocks are subjected to high heat, high pressure, hot mineral-rich fluids or, more commonly, some combination of these factors. Types: Foliates, non-foliates. Generally found near tectonic plates where the plates come together or converge. <br>
+      <mark>Sedimentary rocks</mark>:  formed from deposits of pre-existing rocks or pieces of once-living organism that accumulate on the Earth's surface. Types: clastic, organic (biological), and chemical. <br> 
+    </p>
+    
+    <h2 id="volcano-types"><br><br><br><br>Volcano Types</h2>
+    <p>
+      <mark> Cinder cones</mark>: Smalleset. Made of small fragments of rock, called cinders. A few hundred feet tall (100 to 150 m), and rarely are larger than 600 to 900 feet (200 to 300 m) in height.<br>
+      <mark>Composite (stratovolcanoes)</mark>: Felsic to intermediate lava. Eruption style: explosive.  The volcano is constructed layer by layer, as ash and lava solidify, one on top of the other. The result is the classic cone shape of composite volcanoes. Found on convergent plate boundaries. <br>
+      <mark>Lava Domes</mark>: also volcanic domes. Any steep-sided mound that is formed when lava reaches the Earth's surface is so viscous that it cannot flow away readily and accumulates around the vent.<br>
+      <mark>Maar</mark>: low-relief, broad volcanic crater formed by shallow explosive eruptions. The explosions are usually caused by the heating and boiling of groundwater when magma invades the groundwater table. Maars often fill with water to form a lake. <br>
+      <mark>Shield volcanoes</mark>: Low viscosity (highly fluid). Basaltic, low silica. Eruptions: non-explosive; effusive. Mafic lava. VEI: 0-1. Found on divergent boundaries. <br>
+      <mark>Submarine volcanoes</mark>: underwater vents or fissures in the Earth's surface from which magma can erupt <br>
+    </p>
+
+    
+    <h2 id="wetlands"><br><br><br><br> Wetlands</h2>
+    <p>
+
+
+      <mark>Aerenchyma</mark>: in marshes. Plant tissue within the stem that allows air to move from the leaves into the rooting zone. This modification allows to survive in wet mud with low oxygen levels <br>
+      <mark>Baygall</mark>: type of bog found in forest of Gulf Coast states. covered in heath or heather shrubs rooted in sphagnum moss and peat <br>
+      <mark>Blanket bog</mark>: blanket mire, featherbed bog. forming where there is a climate of high rainfall and a low level of evapotranspiration, allowing peat to develop not only in wet hollows but over large expanses of undulating ground. <br>
+      <mark>Bogs</mark>: muskegs. In cool, northern climates. Lowest pH (acidic). Has acidic water; most water received from precipitation. The rainwater that bogs receive are mineral Poor. Spongy peat deposits. Peat due to low oxygen in soil. Low in nutrients. Low in Dissolved Oxygen (DO) because bogs are saturated with water which doesn't flow in and out of them easily. Low levels of oxygen and make it more difficult for fungi and bacteria to decompose dead plants quickly, leading to peat formation.  Forms: 1. as sphagnum moss grows over a lake or pond and slowly fills it (terrestrialization), 2. form as sphagnum moss blankets dry land and prevents water from leaving the surface (paludification). hard clay soil that prevents water from seeping out. Evergreen shrubs and cranberries found. Protects Water filtration, flood prevention, habitat protection. <br>
+      <mark>Cataract bog</mark>: rare ecological community formed where a permanent stream flows over a granite outcropping. Ecosystems that feature permanent freshwater stream <br>
+      <mark>Fens</mark>: peat forming. Less acidic due to frequent water flow. Steady source from groundwater. The mineral-rich groundwater in fens acts as a pH buffer. Woody vegetation. Sedges. Peat accumulating. Lower latitude than bogs. More nutrients than bogs. Supports larger diversity of plants than bogs. Waterlogged soil that is peaty, fed by upwelling water, not productive. Rich fens are less acidic than poor fens. Poor fens have higher species richness than bogs. Above rocks rich in calcium <br>
+      <mark>Fens → Bogs transition</mark>: transitions as peat accumulates, groundwater input can be reduced or cut off  <br>
+      <mark>Halophytes</mark>: live in salt marshes. <br>
+      <mark>Mallines</mark>: wetland and meadow in argentina. Where water table is at surface but mallin is still area of net infiltration<br>
+      <mark>Mangroves</mark>:  tropical plants that are adapted to loose, wet soils, salt water and being periodically submerged by tides. Categorized as swamps. Intertidal zone. Diversity greatest in South East Asia <br>
+      <mark>Marshes</mark>: fed by groundwater. herbaceous plants (grass, reed, sedges). Treeless. Types: tidal salt marshes, tidal freshwater marshes (common in U.S.), and inland freshwater marshes. Vegetation: Papyrus Sedge
+Peat: turf, is an accumulation of partially decayed vegetation or organic matter. Mire, Quagmire, Muskeg <br>
+      <mark>Peat bogs</mark>: carbon sinks. stores carbon in process called sequestration. 200 bil tons globally <br>
+      <mark>Pocosins</mark>: “swamp on a hill”. Evergreen tree/shrub and tree dominated. Rain provides most of their water. Ombrotrophic environments
+Prairie potholes: depressional wetlands. <br>
+      <mark>Quaking bog</mark>: area of “shoogly ground” usually found on wet moorlands or near ponds and marshes. They form where an area of water is slowly covered as a mat of vegetation grows over the surface. This commonly happens on peat bogs. <br>
+      <mark>Raised bog</mark>: ombrotrophic bogs. Acidic. wet habitats that are poor in mineral salts and are home to flora and fauna that can cope with such extreme conditions. unlike fens, are exclusively fed by precipitation and from mineral salts introduced. Vaguely doe shaped as decaying vegetation accumulates in center. <br>
+      <mark>Salinas</mark>: man modified habitats. Salt pans. primarily found in coastal areas.   <br>
+      <mark>Salt marsh</mark>: Formation by sand/silt deposited from rivers/ streams. Shelter from waves. <br>
+      <mark>Seep</mark>: or flush. Moist/wet place where water, usually groundwater, reaches the earth's surface from an underground aquifer. Found near the ends of glacial moraines <br>
+      <mark>Swamps</mark>: water comes from variety. Forested (ex: mangrove forest). Dominated by trees. Types: shrub swamps and forested swamps. Nutrient rich.  <br>
+      <mark>Turf</mark>: peat <br>
+      <mark>Valley bog</mark>: A mire community that develops in wet valley bottoms, valleys with some downstream impedance, or badly drained hollows. 
+Vernal pools: seasonal depressional wetlands. sometimes connected to each other by small drainages known as vernal swales. They may be completely dry for most of the summer and fall. Valuable to local ecosystems. <br>
+      <mark>Wetlands</mark>: place in which the land is covered by water (salt, fresh, or somewhere in between) either seasonally/permanently. 1) at least periodically, the land supports predominantly hydrophytes; 2) the substrate is predominantly undrained hydric soil; and 3) the substrate is saturated with water or covered by shallow water at some time during the growing season of each year. A flat area with a shallow water table and low permeability is favorable. Improve water quality: removes pollutants from surface waters. sediment trapping, nutrient removal, chemical detoxification  Vegetation here provides habitat and food. Classified: Riverine (rivers) Lacustrine (lake) Palustrine (isolated)  <br>
+      <mark>Wetting front</mark>: boundary between the upper wet part of the soil and the dry lower part
+
+
+      
+
+    </p>
+
+
+
+
+
+
+
+
+
+    
+  </div>
+
+
+</body>
+
+</html>
